@@ -1,0 +1,54 @@
+<odoo>
+    <data>
+        <record id="te_event_speaker_view_tree" model="ir.ui.view">
+            <field name="name">te.event.speaker.tree</field>
+            <field name="model">te.event.speaker</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="charges"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="te_event_speaker_view_form" model="ir.ui.view">
+            <field name="name">te.event.speaker.form</field>
+            <field name="model">te.event.speaker</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="charges"/>
+                            </group>
+                            <workbook>
+
+                            </workbook>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_te_event_speaker" model="ir.actions.act_window">
+            <field name="name">Event Speaker</field>
+            <field name="res_model">te.event.speaker</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+                id="te_event_speaker"
+                name="Speaker"
+                parent="event_management_root_1"
+                action="action_te_event_speaker"
+                sequence="13"
+        />
+
+    </data>
+</odoo>

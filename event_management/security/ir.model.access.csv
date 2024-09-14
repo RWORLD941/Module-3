@@ -1,0 +1,17 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_te_event,te.event,model_te_event,,1,1,1,1
+access_te_event_agenda,te.event.agenda,model_te_event_agenda,,1,1,1,1
+access_te_event_budget,te.event.budget,model_te_event_budget,,1,1,1,1
+access_te_event_checklist,te.event.checklist,model_te_event_checklist,,1,1,1,1
+access_te_event_material,te.event.material,model_te_event_material,,1,1,1,1
+access_te_event_promotion,te.event.promotion,model_te_event_promotion,,1,1,1,1
+access_te_event_session,te.event.session,model_te_event_session,,1,1,1,1
+access_te_event_sponsorship,te.event.sponsorship,model_te_event_sponsorship,,1,1,1,1
+access_te_event_venue,te.event.venue,model_te_event_venue,,1,1,1,1
+access_te_event_venue_date,te.event.venue.date,model_te_event_venue_date,,1,1,1,1
+access_te_event_sponsor,te.event.sponsor,model_te_event_sponsor,,1,1,1,1
+access_te_event_participant,te.event.participant,model_te_event_participant,,1,1,1,1
+access_te_event_organizer,te.event.organizer,model_te_event_organizer,,1,1,1,1
+access_te_event_speaker,te.event.speaker,model_te_event_speaker,,1,1,1,1
+access_te_event_ticket,te.event.ticket,model_te_event_ticket,,1,1,1,1
+access_te_event_guest,te.event.guest,model_te_event_guest,,1,1,1,1

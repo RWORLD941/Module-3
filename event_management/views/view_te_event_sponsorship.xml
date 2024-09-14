@@ -1,0 +1,56 @@
+<odoo>
+    <data>
+        <record id="te_event_sponsorship_view_tree" model="ir.ui.view">
+            <field name="name">te.event.sponsorship.tree</field>
+            <field name="model">te.event.sponsorship</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="contribution_amount"/>
+                    <field name="contribution_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="te_event_sponsorship_view_form" model="ir.ui.view">
+            <field name="name">te.event.sponsorship.form</field>
+            <field name="model">te.event.sponsorship</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="contribution_amount"/>
+                                <field name="contribution_date"/>
+                            </group>
+                            <workbook>
+
+                            </workbook>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_te_event_sponsorship" model="ir.actions.act_window">
+            <field name="name">Event Sponsorship</field>
+            <field name="res_model">te.event.sponsorship</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+                id="te_event_sponsorship"
+                name="Sponsorship"
+                parent="event_management_root_1"
+                action="action_te_event_sponsorship"
+                sequence="6"
+        />
+
+    </data>
+</odoo>

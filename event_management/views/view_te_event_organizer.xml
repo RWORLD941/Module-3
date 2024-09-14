@@ -1,0 +1,56 @@
+<odoo>
+    <data>
+        <record id="te_event_organizer_view_tree" model="ir.ui.view">
+            <field name="name">te.event.organizer.tree</field>
+            <field name="model">te.event.organizer</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="organizer_type"/>
+                    <field name="commission"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="te_event_organizer_view_form" model="ir.ui.view">
+            <field name="name">te.event.organizer.form</field>
+            <field name="model">te.event.organizer</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="organizer_type"/>
+                                <field name="commission"/>
+                            </group>
+                            <workbook>
+
+                            </workbook>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_te_event_organizer" model="ir.actions.act_window">
+            <field name="name">Event Organizer</field>
+            <field name="res_model">te.event.organizer</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+                id="te_event_organizer"
+                name="Organizer"
+                parent="event_management_root_1"
+                action="action_te_event_organizer"
+                sequence="11"
+        />
+
+    </data>
+</odoo>

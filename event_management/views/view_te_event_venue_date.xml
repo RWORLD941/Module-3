@@ -1,0 +1,54 @@
+<odoo>
+    <data>
+        <record id="te_event_venue_date_view_tree" model="ir.ui.view">
+            <field name="name">te.event.venue.date.tree</field>
+            <field name="model">te.event.venue.date</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="date"/>
+                    <field name="is_available"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="te_event_venue_date_view_form" model="ir.ui.view">
+            <field name="name">te.event.venue.date.form</field>
+            <field name="model">te.event.venue.date</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="date"/>
+                                <field name="is_available"/>
+                            </group>
+                            <workbook>
+
+                            </workbook>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_te_event_venue_date" model="ir.actions.act_window">
+            <field name="name">Event Venue Date</field>
+            <field name="res_model">te.event.venue.date</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+                id="te_event_venue_date"
+                name="Venue Date"
+                parent="event_management_root_1"
+                action="action_te_event_venue_date"
+                sequence="3"
+        />
+
+    </data>
+</odoo>

@@ -1,0 +1,52 @@
+<odoo>
+    <data>
+        <record id="te_event_participant_view_tree" model="ir.ui.view">
+            <field name="name">te.event.participant.tree</field>
+            <field name="model">te.event.participant</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="te_event_participant_view_form" model="ir.ui.view">
+            <field name="name">te.event.participant.form</field>
+            <field name="model">te.event.participant</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <workbook>
+
+                            </workbook>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_te_event_participant" model="ir.actions.act_window">
+            <field name="name">Event Participant</field>
+            <field name="res_model">te.event.participant</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+                id="te_event_participant"
+                name="Participant"
+                parent="event_management_root_1"
+                action="action_te_event_participant"
+                sequence="12"
+        />
+
+    </data>
+</odoo>

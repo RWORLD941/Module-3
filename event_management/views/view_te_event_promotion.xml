@@ -1,0 +1,60 @@
+<odoo>
+    <data>
+        <record id="te_event_promotion_view_tree" model="ir.ui.view">
+            <field name="name">te.event.promotion.tree</field>
+            <field name="model">te.event.promotion</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="promotion_type"/>
+                    <field name="details"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="te_event_promotion_view_form" model="ir.ui.view">
+            <field name="name">te.event.promotion.form</field>
+            <field name="model">te.event.promotion</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="promotion_type"/>
+                                <field name="details"/>
+                                <field name="start_date"/>
+                                <field name="end_date"/>
+                            </group>
+                            <workbook>
+
+                            </workbook>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_te_event_promotion" model="ir.actions.act_window">
+            <field name="name">Event Promotion</field>
+            <field name="res_model">te.event.promotion</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+                id="te_event_promotion"
+                name="Promotion"
+                parent="event_management_root_1"
+                action="action_te_event_promotion"
+                sequence="10"
+        />
+
+    </data>
+</odoo>
